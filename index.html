@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-=1.0">
   <title>Sandy Style | Fashion Store</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -25,19 +25,19 @@
       .btn-primary {
         @apply inline-block rounded-xl bg-[#8E1EA2]
                px-6 py-3 font-semibold text-white
-               transition duration-300
+               duration-300
                hover:bg-[#C654C3] hover:shadow-lg;
       }
 
       .nav-link {
-        @apply font-medium transition-colors
+        @apply font-medium
                hover:text-[#C654C3];
       }
 
       .fashion-card {
         @apply rounded-2xl border border-[#ED96D7]/40
-               bg-white p-6 shadow-sm transition duration-300
-               hover:-translate-y-2 hover:shadow-xl
+               bg-white p-6 shadow-sm duration-300
+               hover:shadow-xl
                dark:bg-[#26172b] dark:border-[#63356a];
       }
     }
@@ -46,7 +46,6 @@
 
 <body class="min-h-screen">
 
- 
   <header class="sticky top-0 z-50 border-b border-[#ED96D7]/30
                  bg-white/90 backdrop-blur-xl
                  dark:bg-[#160d19]/90">
@@ -66,20 +65,33 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <button id="toggledark"
-        class="rounded-full border border-[#C654C3]/40
-               px-4 py-2 text-sm font-semibold
-               transition hover:bg-[#FFC0DE]/40"
-        type="button">
-        toggle
-      </button>
+     
+<div class="flex items-center gap-3">
+  <button
+    id="toggledark"
+    class="rounded-full border border-[#C654C3]/40 px-4 py-2 text-sm 
+    font-semibold hover:bg-[#FFC0DE]/40"
+    type="button"
+  >
+    Toggle
+  </button>
+
+  <button
+    id="replayTimeline"
+    class="rounded-full border border-[#C654C3]/40 
+    px-4 py-2 text-sm font-semibold hover:bg-[#FFC0DE]/40"
+    type="button"
+  >
+    🗘
+  </button>
+</div>
+
 
     </div>
   </header>
 
   <main>
 
-  
     <section id="hero" class="px-6 py-12 md:py-20">
 
       <div class="mx-auto grid max-w-7xl items-center gap-10
@@ -109,9 +121,8 @@
           <a href="#services"
              class="inline-block rounded-xl bg-white px-7 py-4
                     font-bold text-[#8E1EA2] shadow-lg
-                    transition hover:-translate-y-1
                     hover:bg-[#FFC0DE]">
-            Shop Our Collection 
+            Shop Our Collection
           </a>
 
           <p class="mt-6 text-sm text-white/80">
@@ -134,7 +145,6 @@
         </div>
       </div>
     </section>
-
 
     <section id="about" class="px-6 py-16">
 
@@ -165,7 +175,6 @@
       </div>
     </section>
 
-    
     <section id="services" class="px-6 py-16">
 
       <div class="mx-auto max-w-7xl">
@@ -196,7 +205,6 @@
               Stylish T-shirts, blouses, and everyday essentials
               for effortless outfits.
             </p>
-          
           </article>
 
           <article class="fashion-card">
@@ -208,7 +216,6 @@
               Beautiful styles for casual days, celebrations,
               and special occasions.
             </p>
-           
           </article>
 
           <article class="fashion-card">
@@ -220,7 +227,6 @@
               Cozy layers and stylish outerwear to complete
               your everyday look.
             </p>
-          
           </article>
 
           <article class="fashion-card">
@@ -232,7 +238,6 @@
               Comfortable fits and versatile styles
               for your everyday wardrobe.
             </p>
-           
           </article>
 
           <article class="fashion-card">
@@ -244,7 +249,6 @@
               Add the perfect finishing touch with accessories
               that express your personality.
             </p>
-           
           </article>
 
           <article class="fashion-card">
@@ -257,14 +261,12 @@
               Refresh your wardrobe with fashionable pieces
               that fit your budget.
             </p>
-           
           </article>
 
         </div>
       </div>
     </section>
 
-   
     <section id="contact" class="px-6 py-16">
 
       <div class="mx-auto max-w-3xl rounded-3xl
@@ -272,12 +274,10 @@
                   bg-white p-8 shadow-xl
                   dark:bg-[#26172b] md:p-12">
 
-    
-          <h2 class="text-3xl font-black md:text-4xl">
-            Let's Talk Fashion!💗
-          </h2>
+        <h2 class="text-3xl font-black md:text-4xl">
+          Let's Talk Fashion!💗
+        </h2>
 
-        
         <form id="contactForm" class="space-y-5">
 
           <div>
@@ -321,7 +321,7 @@
           </div>
 
           <button type="submit" class="btn-primary w-full">
-            Send Message 
+            Send Message
           </button>
 
           <p id="formStatus" role="status"
@@ -333,6 +333,200 @@
 
   </main>
 
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script>console.log("Gsap ver", gsap.version);
+  
+  // 1.Tween
+        // gsap.to("h1", {x: -200, duration: 1});
+        // gsap.from("h1", {y:-60,opacity: 0, duration: 1});
+        // gsap.from("h1", {opacity: 0}, {opacity: 1, duration: 5});
+
+        // gsap.to("h1", {rotation: 360, duration: 2});
+        // gsap.to("h1", {opacity: 0.3, duration: 2});
+        // gsap.to("h1", {scale: 3, duration: 2});
+        // gsap.to("h1", {backgroundColor: "pink", duration: 2});
+
+        
+      // 2.Easing
+      // gsap.from("h1", {y:-60,opacity: 0, duration: 1, ease: "power2.out"});
+      // gsap.from("h1", {y:-60,opacity: 0, duration: 1, ease: "back.out(2.5)"});
+      //  gsap.from("h1", {y:-60,opacity: 0, duration: 1, ease: "bounce.out"});
+        //  gsap.from("h1", {y:-60,opacity: 0, duration: 1, ease: "elastic.out(1, 0.5)"});
+      
+      
+      // 3.stagger 
+      // gsap.from("nav a", {y:-20,opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.5});
+
+      // 4.timeline
+      const tl = gsap.timeline({defaults: {duration: 0.5, ease: "power2.out"}});   
+      tl.from("h1", {y:-60,opacity: 0, duration: 0})
+        .from("nav a", {y:-20,opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.5})
+        .from("main section", {y:-20,opacity: 0});
+
+      // tl.from("h1", {y:-60,opacity: 0})
+      //   .from("h2", {y:-60,opacity: 0})
+      //   .from("p", {y:-60,opacity: 0})
+        
+  
+      
+  </script>
+  
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+
+<script>
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+ 
+  gsap.from("#hero span", {
+    y: -30,
+    opacity: 0,
+    duration: 1,
+    ease: "back.out(1.7)"
+  });
+
+
+  gsap.from("#hero p", {
+    y: 25,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.3,
+    ease: "power3.out"
+  });
+
+
+  gsap.to("#hero .text-8xl", {
+    y: -15,
+    rotation: 8,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+  });
+
+  
+  document.querySelectorAll(".fashion-card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        y: -10,
+        scale: 1.03,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        y: 0,
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+  });
+
+ 
+  document.querySelectorAll(".fashion-card > div").forEach((icon) => {
+    icon.addEventListener("mouseenter", () => {
+      gsap.to(icon, {
+        rotation: 8,
+        scale: 1.12,
+        duration: 0.3,
+        ease: "back.out(2)"
+      });
+    });
+
+    icon.addEventListener("mouseleave", () => {
+      gsap.to(icon, {
+        rotation: 0,
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+  });
+
+
+  gsap.utils.toArray("main section h2").forEach((heading) => {
+    gsap.from(heading, {
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+  });
+
+
+  gsap.utils.toArray(".fashion-card").forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none none"
+      },
+      y: 50,
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.7,
+      delay: (index % 3) * 0.12,
+      ease: "power3.out"
+    });
+  });
+
+
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+      gsap.to(button, {
+        scale: 1.05,
+        duration: 0.25,
+        ease: "power2.out"
+      });
+    });
+
+    button.addEventListener("mouseleave", () => {
+      gsap.to(button, {
+        scale: 1,
+        duration: 0.25,
+        ease: "power2.out"
+      });
+    });
+  });
+
+
+  gsap.from("#about > div", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from("#contactForm > div", {
+    scrollTrigger: {
+      trigger: "#contactForm",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    x: -30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+</script>
+
+
+  
     <script>
        
         const toggleButton = document.querySelector('#toggledark');
@@ -340,6 +534,21 @@
         toggleButton.addEventListener('click', function () {
             html.classList.toggle('dark');
 
+         
+    document.querySelector('#replayTimeline').addEventListener('click', function () {
+     location.reload();
+      });
+      
+      gsap.to(toggleButton, {
+      rotation: 360,
+      duration: 0.5,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.set(toggleButton, { rotation: 0 });
+              }
+              
+          });
+ 
         });
     </script>
 
